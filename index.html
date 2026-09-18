@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6f4cff" />
+  <meta name="description" content="Invitación digital creada por Ross Digital Studio" />
+  <title>Invitación</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="loader" class="loader" role="dialog" aria-modal="true" aria-labelledby="loader-title">
+    <div class="loader__glow loader__glow--one" aria-hidden="true"></div>
+    <div class="loader__glow loader__glow--two" aria-hidden="true"></div>
+
+    <div class="loader__panel">
+      <div id="loader-icon" class="loader__icon" aria-hidden="true">✦</div>
+      <p id="loader-kicker" class="eyebrow">UNA CELEBRACIÓN ESTÁ POR COMENZAR</p>
+      <h1 id="loader-title" class="loader__title">Nombre</h1>
+      <p id="loader-copy" class="loader__copy">
+        Esta invitación contiene música. Ajustá el volumen y tocá entrar para comenzar.
+      </p>
+      <button id="enter-button" class="button button--primary button--wide" type="button">
+        <span id="enter-label">Entrar a la invitación</span>
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Pausar música" hidden>
+    <span class="music-toggle__icon" aria-hidden="true">♪</span>
+  </button>
+
+  <audio id="audio" preload="auto" loop></audio>
+
+  <main class="page-shell">
+    <article class="invitation-card">
+      <section class="hero" aria-label="Portada de la invitación">
+        <div id="hero-media" class="hero__media" aria-hidden="true"></div>
+        <div class="hero__overlay"></div>
+
+        <div id="hero-decorations" class="hero__decorations" aria-hidden="true">
+          <span>✦</span><span>•</span><span>✧</span><span>•</span>
+        </div>
+
+        <div id="hero-characters" class="hero__characters" aria-hidden="true">
+          <img id="character-image" class="hero__character" alt="" />
+        </div>
+
+        <div class="hero__content">
+          <p id="hero-kicker" class="eyebrow eyebrow--hero reveal">¡ESTÁS INVITADO!</p>
+          <h1 id="guest-name" class="hero__name reveal">NOMBRE</h1>
+          <p id="age-label" class="hero__age reveal">CUMPLE 10 AÑOS</p>
+        </div>
+      </section>
+
+      <section id="intro-section" class="content-section intro-section reveal">
+        <span id="intro-icon" class="section-icon" aria-hidden="true">✦</span>
+        <p id="invitation-message" class="intro-message">
+          Te invito a compartir un día muy especial.
+        </p>
+
+        <div id="portrait-wrap" class="portrait-wrap">
+          <img id="portrait" class="portrait" alt="Foto del cumpleañero" />
+        </div>
+      </section>
+
+      <section id="event-section" class="content-section event-section reveal">
+        <p id="event-kicker" class="section-kicker">EL GRAN DÍA ES</p>
+
+        <div class="date-card">
+          <p id="event-date" class="date-card__date">Sábado 10 de Octubre</p>
+          <div class="date-card__line"></div>
+          <p id="event-time" class="date-card__time">18:00 a 21:00 hs.</p>
+        </div>
+
+        <section id="countdown-card" class="countdown-card" aria-labelledby="countdown-title">
+          <span id="countdown-icon" class="countdown-card__badge" aria-hidden="true">✦</span>
+          <p class="countdown-card__eyebrow">CUENTA REGRESIVA</p>
+          <h2 id="countdown-title" class="countdown-card__title">¡Falta muy poco!</h2>
+
+          <div id="countdown" class="countdown" aria-live="polite">
+            <div class="countdown__unit">
+              <span id="countdown-days" class="countdown__value">00</span>
+              <span class="countdown__label">Días</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit">
+              <span id="countdown-hours" class="countdown__value">00</span>
+              <span class="countdown__label">Hs</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit">
+              <span id="countdown-minutes" class="countdown__value">00</span>
+              <span class="countdown__label">Min</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit">
+              <span id="countdown-seconds" class="countdown__value">00</span>
+              <span class="countdown__label">Seg</span>
+            </div>
+          </div>
+
+          <p id="countdown-status" class="countdown-card__status"></p>
+        </section>
+
+        <div id="location-block" class="location-block">
+          <p id="location-kicker" class="section-kicker">TE ESPERO EN</p>
+
+          <div class="location-card">
+            <div class="location-card__icon" aria-hidden="true">📍</div>
+            <div>
+              <p id="event-venue" class="location-card__venue">Lugar del evento</p>
+              <p id="event-address" class="location-card__address">Dirección</p>
+            </div>
+          </div>
+        </div>
+
+        <a id="map-button" class="button button--secondary button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span id="map-label">Cómo llegar</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section id="extra-section" class="content-section extra-section reveal">
+        <p id="extra-kicker" class="section-kicker">INFORMACIÓN EXTRA</p>
+        <div class="extra-card">
+          <span id="extra-icon-left" aria-hidden="true">✦</span>
+          <p id="extra-message">Podés usar este bloque para cualquier información adicional.</p>
+          <span id="extra-icon-right" aria-hidden="true">✦</span>
+        </div>
+      </section>
+
+      <section id="dresscode-section" class="content-section dresscode-section reveal">
+        <p id="dresscode-kicker" class="section-kicker">DRESS CODE</p>
+        <div class="dresscode-card">
+          <span id="dresscode-icon" aria-hidden="true">◈</span>
+          <p id="dress-code">Dress code opcional.</p>
+        </div>
+      </section>
+
+      <section id="confirmation-section" class="content-section confirmation-section reveal">
+        <span id="confirmation-icon" class="section-icon section-icon--small" aria-hidden="true">✦</span>
+        <p id="confirmation-kicker" class="section-kicker">CONFIRMACIÓN</p>
+        <h2 id="confirmation-title" class="section-title">¿Venís a festejar?</h2>
+        <p id="confirmation-copy" class="section-copy">Confirmá tu asistencia.</p>
+
+        <a id="confirmation-button" class="button button--whatsapp button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span id="confirmation-button-icon" aria-hidden="true">💬</span>
+          <span id="confirmation-button-label">Confirmar asistencia</span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Diseñado por
+          <a id="instagram-link" href="https://www.instagram.com/rossdigitalstudio/" target="_blank" rel="noopener noreferrer">
+            @rossdigitalstudio
+          </a>
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
